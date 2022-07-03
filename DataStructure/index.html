@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <style>
+            .cart{
+                height: 500px;
+                width: 400px;
+                background-color: pink;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div class="cart">
+        </div>
+        <button onclick="add()">加入購物車</button>
+        <button onclick="remove()">刪除</button>
+
+        <script>
+          const products=["吐司","全麥吐司","大蒜麵包","法國麵包","大理石麵包","馬卡龍","起司蛋糕","三明治","千層蛋糕","芒果蛋糕","草們蛋糕"];
+          const cart=document.querySelector(".cart");
+
+          function addToCart(i){
+              
+              const div=document.createElement("div");
+              const name=document.createTextNode(products[i]);
+              div.appendChild(name);
+              cart.appendChild(div);
+
+          }
+
+          function add(){
+            for( i=0; i<products.length; i++){
+            addToCart(i);
+          }
+          }
+
+          function remove(){
+            cart.innerHTML="";
+
+          }
+        </script>
+    </body>
+</html>

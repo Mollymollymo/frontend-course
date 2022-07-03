@@ -1,0 +1,156 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+}
+
+#navbar{
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+    padding: 8px 60px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+.menu-container{
+    display: flex;
+    width: 250px;
+    justify-content: space-between;
+}
+.logo{
+    font-size:32px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.menu-item{
+    font-size:20px;
+    cursor: pointer;
+}
+.title{
+    font-size: 36px;
+    font-weight: bold;
+}
+.main-image-container{
+    position: relative;
+}
+.title-container{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.projects,.about,.contact{
+    padding: 50 30 0 30px;
+}
+.projects-title,.about-title,.contact-title{
+    font-size: 32px;
+}
+.line{
+    background-color: black;
+    width:100%;
+    height: 1px;
+    margin-top: 20px;
+}
+.summer-square,.brick-square,.renovated-square,.barn-square{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: black;
+    width: 120px;
+    color: white;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.summer-house,.brick-house,.renovated,.barn-house {
+    position: relative;
+}
+.row-1,.row-2{
+    display: flex;
+    justify-content: space-between;
+}
+.row-1,.row-2{
+    margin-top: 20px;
+}
+.introduce{
+    margin-top: 20px;
+    font-size: 20px;
+}
+.name{
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 20px;
+}
+.job-title{
+    margin-top: 20px;
+    color: grey;
+    font: size 20px;
+}
+.discription,.desc{
+    width: 350;
+    margin-top: 20px;
+}
+.contact-square{
+    width: 350px;
+    height: 50px;
+    background-color: rgba(187, 180, 180, 0.801);
+    margin-top: 20px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.contact-square:hover{
+    background-color: gray;
+}
+.about-section{
+    display: flex;
+    justify-content: space-between;
+    padding: 20 10px;
+    
+}
+.contact-input{
+    width:100%;
+    height:30px;
+}
+.submit{
+    background-color: black;
+    margin-top: 20px;
+    color:white;
+    border:0;
+    width: 140px;
+    height: 40px;
+    cursor:pointer;
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+.submit:hover{
+    background-color: rgb(215, 23, 183);
+    color: rgb(109, 163, 29);
+}
+.footer{
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    margin-top: 60px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-wrapper{
+    margin-top: 15px;
+}

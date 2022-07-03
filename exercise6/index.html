@@ -1,0 +1,166 @@
+<html>
+    <head>
+        <style>
+            *{
+            box-sizing:border-box;
+        }
+
+        .products-area{
+            display:flex;
+            margin-top:20px;
+        }
+
+        .cart-title, .cart{
+            margin-top:30px;
+        }
+
+        .add-button{
+            width:150px;
+            cursor:pointer;
+        }
+
+        .product-container{
+            width:250px;
+            height:100px;
+            padding:20px;
+            display:flex;
+            flex-direction:colum;
+            justify-content:space-between;
+            align-items:center;
+            margin-right:30px;
+            border-radius:4px;
+            background-color:aqua
+        }
+
+        .cart{
+            display:flex;
+            background-color: aqua;
+            width:550px;
+            flex-wrap:wrap;
+            padding:20px;
+        }
+
+        .cart-item{
+            width:200px;
+            height:150px;
+            margin-top:10px;
+            background-color:grey;
+            border-radius:4px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            margin-right:20px;
+        }
+        </style>
+    </head>
+
+    <body>
+        <div>商品區</div>
+        <div class="products-area"></div>
+        <div class="cart-title">購物車</div>
+        <button onclick="removeAll()">清空購物車</button>
+        <div class="cart"></div>
+    </body>
+
+    <script>
+        const products=["滷肉飯","貢丸湯","乾麵"];
+
+        const cart_items = [];
+
+        const productsArea=document.querySelector(".products-area");
+        const cart=document.querySelector(".cart");
+
+        function generateProducts(){
+            
+            for (let i=0;i<products.length;i++){
+               const product_name=products[i];
+               generateProductItem(product_name);
+            }
+        }
+
+        let productId=1;
+
+        function generateProductItem(product_name){
+            const div=document.createElement("div");//<div></div>
+
+            
+
+            div.classList.add("product-container");//<div class="product-container"></div>
+
+            const div_text=document.createTextNode(product_name);
+
+            const button=document.createElement("button");//<button></button>
+
+            
+
+            button.addEventListener("click",function(){
+                addToCart(product_name);
+                productId=productId+1;
+                
+            });
+
+            button.classList.add("add-button");//<button class="add-button"></button>
+
+            const button_text=document.createTextNode("加入購物車");//<button class="add-button">加入購物車</button>
+
+            button.appendChild(button_text);//<button>button_text</button>
+
+            div.appendChild(div_text);//<button><div>div_text</div></button>
+            div.appendChild(button);//<div><button><div>div_text</div></button></div>
+
+            productsArea.appendChild(div);//productsArea新增一個div
+        }
+
+        function addToCart(product_name){
+            const cart_item=document.createElement("div");//<div></div>
+
+            cart_item.setAttribute('id',productId);
+
+            cart_item.classList.add("cart-item");//<div class="cart-item"></div>
+
+            const cart_item_text=document.createTextNode(product_name);//<div class="cart-item">product_name</div>
+
+            cart_item.appendChild(cart_item_text);
+
+            cart.appendChild(cart_item);
+
+            const remove_container=document.createElement("div");
+
+            const button=document.createElement("button");
+        
+            button.classList.add("delete-button");
+
+            const button_text=document.createTextNode("刪除");
+
+            button.appendChild(button_text);
+
+            remove_container.appendChild(button);
+
+            cart_item.appendChild(remove_container);
+
+            
+            
+
+            button.addEventListener("click",function(e){
+                console.log(e.target.parentNode.parentNode.remove());
+            })
+
+            
+
+    
+            
+        }
+
+        function deleteItem(){
+            const findId=document.querySelector("productId");
+
+        }
+
+        function removeAll(){
+            cart.innerHTML="";
+        }
+
+        generateProducts();
+
+    </script>
+</html>
