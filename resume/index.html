@@ -1,82 +1,271 @@
 <html>
-    <head>
-        <style>
-            *{
-                box-sizing: border-box;
-            }
-            body{
-                margin: 0;
-            }
-            .page {
-                padding-top: 30px;
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      a {
+        text-decoration: none;
+      }
+      #page1,
+      #page3 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(#fbc2ed, #a6c1ee);
+      }
+      .page1-container,
+      .page3-container {
+        background-color: white;
+        width: 80%;
+        height: 80%;
+        border-radius: 30px;
+        z-index: 1;
+        padding: 35px;
+      }
+      .title {
+        color: #555;
+        font-size: 70px;
+        display: flex;
+        justify-content: center;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      .picture {
+        border-radius: 50%;
+      }
+      .square {
+        background-color: D67BF4;
+        border-radius: 40px;
+        width: 230px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-size: 30px;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+      .section {
+        /* padding: 100px 100px 100px 0px;
+                margin-left: 0px;
+                margin-right: 200px; */
+        position: absolute;
+        right: 15px;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-top: 40px;
+      }
+      #page2,
+      #page4 {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(#a6c1ee, #fbc2ed);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .page2-container,
+      .page4-container {
+        background-color: #f0f0f0;
+        width: 80%;
+        height: 80%;
+        border-radius: 30px;
+        padding: 35px;
+      }
+      .line {
+        background-color: gray;
+        width: 100%;
+        height: 5px;
+        margin-top: 30px;
+        border-radius: 2px;
+      }
+      .me-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 100px;
+      }
+      .introduction {
+        color: grey;
+        font-size: 30px;
 
-            }
-            #page1{
-                width:100%;
-                height:100%;
-                background-color:rgb(243, 189, 216);
-                padding: 50px 20px 20px 20px ;
-            }
-            .title{
-                color: grey;
-                font-size: 100px;
-                display: flex;
-                justify-content: center;
-                
-            }
-            .picture-container{
-                padding: 100px 100px 100px 200px;
-            }
-            .picture{
-                border-radius: 50%;
-            }
-
-            .square{
-                background-color: EBD4C4;
-                border-radius: 50px;
-                width: 500px;
-                height:100px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: grey;
-                font-size: 50px;
-                margin-top: 20px;
-                cursor:pointer;
-            }
-            .section{
-                padding: 90px;
-            }
-            .container{
-                display: flex;
-                justify-content: space-between;
-            }
-            #page2{
-                width:100%;
-                height:100%;
-                background-color:EBD4C4 ;
-            }
-        </style>
-
-    </head>
-    <body>
-        <div id="page1" class="page">
-            <div class="title">Hello! I am Molly.</div>
-            <div class="container">
-                <div class="picture-container">
-                    <img class="picture" src="https://www.petpetbase.com/upload/article/original/f60949748c72c04cd0d1b36750d4c151.jpg" width="350">
-                </div>
-                <div class="section">
-                    <div class="square">About me</div>
-                    <div class="square">Experience</div>
-                    <div class="square">Project</div>
-                </div>
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      .skills {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .skills-title {
+        font-size: 50px;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      .skill-item {
+        display: flex;
+        flex-direction: column;
+      }
+      .html,
+      .css,
+      .js {
+        display: flex;
+        margin-top: 20px;
+      }
+      .html-title,
+      .css-title,
+      .js-title {
+        font-size: 30px;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      .block1,
+      .block2,
+      .block3 {
+        height: 100px;
+        font-size: 30px;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .projects {
+        display: flex;
+        justify-content: space-between;
+        padding: 100px;
+        cursor: pointer;
+      }
+      .exercise,
+      .dr {
+        width: 300px;
+        height: 200px;
+        border-radius: 10px;
+        background-color: D67BF4;
+        color: white;
+        font-size: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="page1" class="page">
+      <div class="page1-container">
+        <div class="title">Hello! I am Molly.</div>
+        <div class="container">
+          <div class="picture-container">
+            <img
+              class="picture"
+              src="https://www.petpetbase.com/upload/article/original/f60949748c72c04cd0d1b36750d4c151.jpg"
+              width="350"
+            />
+          </div>
+          <div class="section">
+            <div class="square">About me</div>
+            <div class="square">Experience</div>
+            <div class="square">Project</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="page2" class="page">
+      <div class="page2-container">
+        <div class="title">About me</div>
+        <div class="line"></div>
+        <div class="me-container">
+          <div class="introduction">
+            <div>我是莫子琳，</div>
+            <div>上進、樂觀且負責任，</div>
+            <div>個性謹慎、細心，</div>
+            <div>且樂於學習新事物。</div>
+          </div>
+          <div class="skills">
+            <div class="skills-title">Skills</div>
+            <div class="skill-item">
+              <div class="html">
+                <img
+                  src="https://cdn.iconscout.com/icon/free/png-256/html5-40-1175193.png"
+                  width="50"
+                />
+                <div class="html-title">HTML</div>
+              </div>
+              <div class="css">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png"
+                  width="50"
+                />
+                <div class="css-title">CSS</div>
+              </div>
+              <div class="js">
+                <img
+                  src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg"
+                  width="45"
+                />
+                <div class="js-title">JAVASCRIPT</div>
+              </div>
             </div>
+          </div>
         </div>
-        <div id="page2" class="page">
-            <div class="title">About me</div>
+      </div>
+    </div>
+    <div id="page3" class="page">
+      <div class="page3-container">
+        <div class="title">Experience</div>
+        <div class="line"></div>
+        <div class="experience">
+          <div class="block1">
+            <div>2015-2020</div>
+            <div>廣州暨南大學-口腔醫學系</div>
+          </div>
+          <div class="line"></div>
+          <div class="block2">
+            <div>2020-2021</div>
+            <div>廣州紅十字會醫院-口腔科實習生</div>
+          </div>
+          <div class="line"></div>
+          <div class="block3">
+            <div>2021-Present</div>
+            <div>維悅牙醫助理</div>
+          </div>
+          <div class="line"></div>
+        </div>
+      </div>
+    </div>
+    <div id="page4" class="page">
+      <div class="page4-container">
+        <div class="title">Projects</div>
+        <div class="line"></div>
+        <div class="projects">
+          <a href="../exercises/index.html">
+            <div class="exercise">Exercise</div>
+          </a>
 
+          <div class="dr">Dr.wells</div>
         </div>
-        
-    </body>
+      </div>
+    </div>
+
+    <script>
+      const exercises = ["menu", "webDemo", "rwd", "cart"];
+      const exercise = document.querySelector(".exercise");
+    </script>
+  </body>
 </html>
