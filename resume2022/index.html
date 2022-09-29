@@ -1,0 +1,227 @@
+<html>
+    <head>
+        <title>Molly</title>
+        <style>
+            * {
+              box-sizing: border-box;
+            }
+            .background{
+                width:100%;
+                height:200%;
+                background: linear-gradient(#a6c1ee, #fbc2ed);
+                padding: 100px 200px;
+            }
+            .page{
+                background-color: white;
+                border-radius: 50px;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                padding: 100px;
+            }
+            .picture{
+                border-radius: 50%;
+            }
+            .chineseName{
+                font-size: 50px;
+                color: black;
+                font-weight: bold;
+                font-family: Comic Sans MS;
+            }
+            .englishName{
+                font-size: 20px;
+                color: black;
+                font-weight: bold;
+                font-family: Comic Sans MS;
+            }
+            .header{
+                display: flex;
+                justify-content: space-between;
+                
+            }
+            .information{
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .square{
+                background-color: D67BF4;
+                border-radius: 40px;
+                width: 230px;
+                height: 70px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .title{
+                color: white;
+                font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+                "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+                font-size: 30px;
+                z-index: 2;
+            }
+            .phone,.location,.fb,.email,.github{
+                display: flex;
+                margin-top: 10px;
+            }
+            .github-url,.fb-url{
+                display: flex;
+            }
+            .experience-discription,.aboutme-discription{
+                color: grey;
+                font-size: 25px;
+                line-height: 40px;
+            }
+            a {
+                text-decoration: none;
+            }
+            .project-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .menu,
+            .webDemo,
+            .rwd,
+            .cart {
+                background-color: F7A3B2;
+                color: white;
+                font-size: 25px;
+                width: 150px;
+                height: 80px;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande";
+                cursor: pointer;
+                transition: 0.3s;
+            }
+            .menu:hover,.webDemo:hover,.rwd:hover,.cart:hover{
+                background-color: #FF99CC;
+                color: black;
+            }
+            .ex-container,.aboutme-container,.project{
+                margin-top: 50px;
+            }
+            .aboutme-discription,.experience-discription,.project-container{
+                padding: 30px;
+            }
+            .phone-number,.location-name,.facebook,.github-name,.email-address{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 15px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="background">
+            <div class="page">
+                <div class="header">
+                    <div class="picture-container">
+                        <img
+                          class="picture"
+                          src="./profile/IMG_9486 2.JPG"
+                          width="250"
+                        />
+                    </div>
+                    <div class="name-container">
+                        <div class="chineseName">莫子琳</div>
+                        <div class="englishName">Molly</div>
+                    </div>
+                    <div class="information">
+                        <div class="phone">
+                            <img class="phone-icon" 
+                            src="http://pngimg.com/uploads/phone/phone_PNG48987.png"
+                            width="30"
+                        />
+                        <div class="phone-number">0987176700</div>
+                        </div>
+                        <div class="location">
+                            <img class="location-icon"
+                            src="http://pngimg.com/uploads/gps/gps_PNG63.png"
+                            width="30"
+                        />
+                            <div class="location-name">Nei-hu,Taipei</div>
+                        </div>
+                        <div class="fb">
+                            <a class="fb-url" href="http://facebook.com/mollymollyisacat">
+                                <img class="fb-icon"
+                                src="https://www.facebook.com/images/fb_icon_325x325.png"
+                                width="30"
+                            />
+                                <div class="facebook">facebook.com/mollymollyisacat</div>
+                            </a>   
+                        </div>
+                        <div class="email">
+                            <img class="email-icon"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyW1ahMRbc-Nq457dD88-jEK7K-4EymcVOmg&usqp=CAU"
+                            width="30"
+                        />
+                            <div class="email-address">erdy521@gmail.com.tw</div>
+                        </div>
+                        <div class="github">
+                            <a class="github-url" href="https://github.com/Mollymollymo">
+                                <img class="github-icon"
+                                src="https://pbs.twimg.com/profile_images/1414990564408262661/r6YemvF9_400x400.jpg"
+                                width="30"
+                            />
+                                <div class="github-name">https://github.com/Mollymollymo</div>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="me">
+                    <div class="aboutme-container">
+                        <div class="square">
+                            <div class="title">About Me</div>
+                        </div>
+                        <div class="aboutme-discription">
+                            透過Udemy、AlgoExpert等平台自學HTML 、CSS和JavaScript ，
+                            學習的同時使用Trello檢視自己的學習進度，
+                            練習靜態網頁時，使用基本的Git&GitHub做版本控制，
+                            並把完成的專案部署在Vercel，此外也有在職全端工程師朋友的教導，
+                            目前正在學習React.js中，希望能有這個機會在AppWorks學習，謝謝！
+                        </div>
+                    </div>
+                    <div class="ex-container">
+                        <div class="square">
+                            <div class="title">Experience</div>
+                        </div>
+                        <div class="experience-discription">
+                            <div>。2015-2020   廣州暨南大學-口腔醫學系</div>
+                            <div>。2020-2021   廣州紅十字會醫院-實習生</div>
+                            <div>。2021-Present   維悅牙醫-助理</div>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="square">
+                            <div class="title">Project</div>
+                        </div>
+                        <div class="project-container">
+                            <a href="../menu/menu.html">
+                                <div class="menu">MENU</div>
+                            </a>
+                            <a href="../web_demo/index.html">
+                                <div class="webDemo">WEBDEMO</div>
+                            </a>
+                            <a href="../rwd_demo/index.html">
+                                <div class="rwd">RWD</div>
+                            </a>
+                            <a href="../cart/index.html">
+                                <div class="cart">CART</div>
+                            </a> 
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+            
+        </div>
+    </body>
+</html>
