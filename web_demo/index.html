@@ -5,31 +5,37 @@
         <link rel="stylesheet" href="./style/style.css">
     </head>
     <body>
-       <!-- 固定在上方的選單 -->
-       <div id="navbar">
-           <div class="logo-cantainer">
-               <div class="logo">LOGO</div>
-           </div>
-           <div class="menu-container">
-               <div class="menu-item">Project</div>
-               <div class="menu-item">About</div>
-               <div class="menu-item">Contact</div>
-
-           </div>
-       </div>
-     <!-- 主視覺和標題 -->
-     <div class="main-image-container">
-         <img src="https://www.w3schools.com/w3images/architect.jpg" alt="width:100%">
-         <div class="title-container">
-             <div class="title">Title</div>
-         </div>
-     </div>
-     <!-- 分頁2 -->
-     <div class="projects">
-         <div class="projects-title">Projects</div>
-         <div class="line"></div>
-         <div class="projects-section">
-             <div class="row-1">
+    <!-- 固定在上方的選單 -->
+    <div id="navbar">
+        <div class="logo-cantainer">
+            <div class="logo">LOGO</div>
+        </div>
+        <div class="menu-container">
+            <div class="menu-item">Project</div>
+            <div class="menu-item">About</div>
+            <div class="menu-item">Contact</div>
+            <div class="hamburger" onclick="menuToggle()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            
+        </div>
+        <div class="menu"></div>
+    </div>
+    <!-- 主視覺和標題 -->
+    <div class="main-image-container">
+        <img class="main-img" src="https://www.w3schools.com/w3images/architect.jpg" alt="width:100%">
+        <div class="title-container">
+            <div class="title">Title</div>
+        </div>
+    </div>
+    <!-- 分頁2 -->
+    <div class="projects">
+        <div class="projects-title">Projects</div>
+        <div class="line"></div>
+        <div class="projects-section">
+            <div class="row-1">
                 <div class="summer-house">
                     <img src="https://www.w3schools.com/w3images/house5.jpg" width="350">
                     <div class="summer-square">
@@ -54,8 +60,8 @@
                         <div>Barn House</div>
                     </div>
                 </div>
-             </div>
-             <div class="row-2">
+            </div>
+            <div class="row-2">
                 <div class="summer-house">
                     <img src="https://www.w3schools.com/w3images/house2.jpg" width="350">
                     <div class="summer-square">
@@ -80,69 +86,88 @@
                         <div>Barn House</div>
                     </div>
                 </div>
-             </div>
-         </div>
-     </div>
-     <!-- 分頁3 -->
-     <div class="about">
-         <div class="about-title">About</div>
-         <div class="line"></div>
-         <div class="introduce">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-         </div>
-         <div class="about-section">
-             <div class="John">
-                 <img src="https://www.w3schools.com/w3images/team2.jpg" width="350">
-                 <div class="name">John Doe</div>
-                 <div class="job-title">CEO&Founder</div>
-                 <div class="discription">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</div>
-                 <div class="contact-square">Contact</div>
-             </div>
-             <div class="Jane">
-                 <img src="https://www.w3schools.com/w3images/team1.jpg" width="350">
-                 <div class="name">Jane Doe</div>
-                 <div class="job-title">Architect</div>
-                 <div class="discription">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</div>
-                 <div class="contact-square">Contact</div>
-             </div>
-             <div class="Mike">
-                 <img src="https://www.w3schools.com/w3images/team3.jpg" width="350">
-                 <div class="name">Mike Ross</div>
-                 <div class="job-title">Architect</div>
-                 <div class="discription">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</div>
-                 <div class="contact-square">Contact</div>
-             </div>
-             <div class="Dan">
-                 <img src="https://www.w3schools.com/w3images/team4.jpg" width="350">
-                 <div class="name">Dan Star</div>
-                 <div class="job-title">Architect</div>
-                 <div class="discription">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</div>
-                 <div class="contact-square">Contact</div>
-             </div>
-         </div>
-     </div>
-     <div class="contact">
-         <div class="contact-title">Contact</div>
-         <div class="line"></div>
-         <div class="contact-block">
-             <div class="desc">Lets get in touch and talk about your next project.</div>
-             <div class="input-wrapper">
+            </div>
+        </div>
+    </div>
+    <!-- 分頁3 -->
+    <div class="about">
+        <div class="about-title">About</div>
+        <div class="line"></div>
+        <div class="introduce">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+        <div class="about-section">
+            <div class="John">
+                <img src="https://www.w3schools.com/w3images/team2.jpg" width="350">
+                <div class="name">John Doe</div>
+                <div class="job-title">CEO&Founder</div>
+                <div class="discription">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</div>
+                <div class="contact-square">Contact</div>
+            </div>
+            <div class="Jane">
+                <img src="https://www.w3schools.com/w3images/team1.jpg" width="350">
+                <div class="name">Jane Doe</div>
+                <div class="job-title">Architect</div>
+                <div class="discription">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</div>
+                <div class="contact-square">Contact</div>
+            </div>
+            <div class="Mike">
+                <img src="https://www.w3schools.com/w3images/team3.jpg" width="350">
+                <div class="name">Mike Ross</div>
+                <div class="job-title">Architect</div>
+                <div class="discription">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</div>
+                <div class="contact-square">Contact</div>
+            </div>
+            <div class="Dan">
+                <img src="https://www.w3schools.com/w3images/team4.jpg" width="350">
+                <div class="name">Dan Star</div>
+                <div class="job-title">Architect</div>
+                <div class="discription">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</div>
+                <div class="contact-square">Contact</div>
+            </div>
+        </div>
+    </div>
+    <div class="contact">
+        <div class="contact-title">Contact</div>
+        <div class="line"></div>
+        <div class="contact-block">
+            <div class="desc">Lets get in touch and talk about your next project.</div>
+            <div class="input-wrapper">
                 <input class="contact-input" type="text" placeholder="Name">
-             </div>
-             <div class="input-wrapper">
+            </div>
+            <div class="input-wrapper">
                 <input class="contact-input" type="text" placeholder="Email">
-             </div>
-             <div class="input-wrapper">
+            </div>
+            <div class="input-wrapper">
                 <input class="contact-input" type="text" placeholder="Subject">
-             </div>
-             <div class="input-wrapper">
+            </div>
+            <div class="input-wrapper">
                 <input class="contact-input" type="text" placeholder="Comment">
-             </div>
-             <button class="submit">SEND MESSAGE</button>
-         </div>
-     </div>
-     <div class="another-image-wrapper">
-         <img src="https://www.w3schools.com/w3images/map.jpg" alt="這是另一張圖" width="100%">
-     </div>
-     <div class="footer">Powered by <a class="footer-link" href="http://google.com.tw" target="_blank">w3.css</a></div>
+            </div>
+            <button class="submit">SEND MESSAGE</button>
+        </div>
+    </div>
+    <div class="another-image-wrapper">
+        <img src="https://www.w3schools.com/w3images/map.jpg" alt="這是另一張圖" width="100%">
+    </div>
+    <div class="footer">Powered by <a class="footer-link" href="http://google.com.tw" target="_blank">w3.css</a></div>
+
+    <script>
+        let showMenu=false;
+        const menu = document.querySelector(".menu");
+
+        function menuToggle(){
+        if(showMenu===true){
+               //把選單關起來
+            menu.classList.remove("open");
+            showMenu=false;
+        }else{
+               //把選單打開
+            menu.classList.add("open");
+            showMenu=true;
+        }
+
+        console.log(showMenu);
+        }
+    </script>
     </body>
 </html>
